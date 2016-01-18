@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="PgHook" />
+  <meta name="keywords" content="mysql,python," />
 
 
 
@@ -55,15 +55,22 @@
 
 
 
-<meta name="description" content="热爱生活、相信未来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Portulaca grandiflora Hook">
-<meta property="og:url" content="http://www.pghook.com/index.html">
+<meta name="description" content="之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+第一处在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-8.
+1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#10;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python操作mysql数据库（编码问题）">
+<meta property="og:url" content="http://www.pghook.com/2016/01/18/python操作mysql数据库（编码问题）/index.html">
 <meta property="og:site_name" content="Portulaca grandiflora Hook">
-<meta property="og:description" content="热爱生活、相信未来">
+<meta property="og:description" content="之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+第一处在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-8.
+1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#10;">
+<meta property="og:updated_time" content="2016-01-18T13:45:49.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Portulaca grandiflora Hook">
-<meta name="twitter:description" content="热爱生活、相信未来">
+<meta name="twitter:title" content="python操作mysql数据库（编码问题）">
+<meta name="twitter:description" content="之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+第一处在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-8.
+1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#10;">
 
 
 
@@ -75,7 +82,7 @@
   };
 </script>
 
-  <title> Portulaca grandiflora Hook </title>
+  <title> python操作mysql数据库（编码问题） | Portulaca grandiflora Hook </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -106,9 +113,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -205,15 +210,9 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -233,10 +232,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/01/18/python操作mysql数据库（编码问题）/" itemprop="url">
-                  python操作mysql数据库（编码问题）
-                </a>
+                python操作mysql数据库（编码问题）
               
             
           </h1>
@@ -291,343 +287,53 @@
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <pre><code>之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+        <span itemprop="articleBody"><pre><code>之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
 </code></pre><h2 id="第一处">第一处</h2><pre><code>在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-<span class="number">8.</span>
 </code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table table_name (first_name varchar(15) NOT NULL,&#10;            last_name varchar(15)&#65292;&#10;            age int,&#10;            )ENGINE=InnoDB DEFAULT CHARSET=utf8</span><br></pre></td></tr></table></figure>
 <h2 id="第二处">第二处</h2><pre><code>在写入数据的时候，指定数据编码。
 </code></pre><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db = MySQLdb.<span class="function"><span class="title">connect</span><span class="params">(<span class="string">"localhost"</span>,<span class="string">"root"</span>,<span class="string">"toortoor"</span>,<span class="string">"test"</span>,charset=<span class="string">'utf8'</span>)</span></span></span><br></pre></td></tr></table></figure>
-
-            
-          </span>
-        
+</span>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/13/使用hexo发布到git碰到的问题/" itemprop="url">
-                  使用hexo发布到git碰到的问题
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2016-01-13T15:11:16+08:00" content="2016-01-13">
-              2016-01-13
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
           
-
+            <a href="/tags/python/" rel="tag">#python</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/13/使用hexo发布到git碰到的问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/13/使用hexo发布到git碰到的问题/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <span itemprop="articleBody">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <h2 id="废话">废话</h2><p>闲的慌，弄个博客写写文章，一开始是买了阿里的主机。要备案闲麻烦，所以就没弄了。后来就用hexo，放到github上了，也就是现在这个啦！！</p>
-<h2 id="代码上传">代码上传</h2><p>我是在window环境下上传的，总是报错目前还有个问题没搞明白。总是去参考别人的<a href="http://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html" target="_blank" rel="external">文字</a></p>
-<p>如下目前貌似需要把这个type修改成git了，原来用github，貌似现在不行了。<br>修改成如下就好了。(‘xxxxx’这个是你要修改的)<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:xxxxx/xxxxx.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
-
+              <a href="/2016/01/13/使用hexo发布到git碰到的问题/" rel="next" title="使用hexo发布到git碰到的问题">
+                <i class="fa fa-chevron-left"></i> 使用hexo发布到git碰到的问题
+              </a>
             
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/06/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2015-12-06T23:20:46+08:00" content="2015-12-06">
-              2015-12-06
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/06/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/06/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/09/16/相信未来/" itemprop="url">
-                  相信未来
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2015-09-16T22:16:32+08:00" content="2015-09-16">
-              2015-09-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/09/16/相信未来/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/16/相信未来/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="description">相信未来</span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/16/相信未来/">
-              Read more &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <footer class="post-footer">
-      
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
 
-  </section>
-
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
         </div>
@@ -636,6 +342,14 @@
 
 
         
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/18/python操作mysql数据库（编码问题）/"
+           data-title="python操作mysql数据库（编码问题）" data-url="http://www.pghook.com/2016/01/18/python操作mysql数据库（编码问题）/">
+      </div>
+    
+  </div>
+
 
       </div>
 
@@ -656,8 +370,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="http://7xn5a6.com1.z0.glb.clouddn.com/e.png" alt="PgHook" itemprop="image"/>
           <p class="site-author-name" itemprop="name">PgHook</p>
@@ -728,6 +451,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一处"><span class="nav-number">1.</span> <span class="nav-text">第一处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二处"><span class="nav-number">2.</span> <span class="nav-text">第二处</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -815,6 +555,167 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 

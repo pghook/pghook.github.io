@@ -294,7 +294,7 @@
         
           <span itemprop="articleBody">
             
-              <pre><code>之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+              <pre><code>之前都是直接把要输出的，保存在文件中去。于是想试试数据库看看，写入数据一看，一堆乱码，于是记录下了。
 </code></pre><h2 id="第一处">第一处</h2><pre><code>在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-<span class="number">8.</span>
 </code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table table_name (first_name varchar(15) NOT NULL,&#10;            last_name varchar(15)&#65292;&#10;            age int,&#10;            )ENGINE=InnoDB DEFAULT CHARSET=utf8</span><br></pre></td></tr></table></figure>
 <h2 id="第二处">第二处</h2><pre><code>在写入数据的时候，指定数据编码。

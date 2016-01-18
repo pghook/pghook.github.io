@@ -55,22 +55,22 @@
 
 
 
-<meta name="description" content="之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+<meta name="description" content="之前都是直接把要输出的，保存在文件中去。于是想试试数据库看看，写入数据一看，一堆乱码，于是记录下了。
 第一处在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-8.
-1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#10;">
+1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python操作mysql数据库（编码问题）">
 <meta property="og:url" content="http://www.pghook.com/2016/01/18/python操作mysql数据库（编码问题）/index.html">
 <meta property="og:site_name" content="Portulaca grandiflora Hook">
-<meta property="og:description" content="之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+<meta property="og:description" content="之前都是直接把要输出的，保存在文件中去。于是想试试数据库看看，写入数据一看，一堆乱码，于是记录下了。
 第一处在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-8.
-1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#10;">
-<meta property="og:updated_time" content="2016-01-18T13:45:49.690Z">
+1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#1">
+<meta property="og:updated_time" content="2016-01-18T13:51:15.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python操作mysql数据库（编码问题）">
-<meta name="twitter:description" content="之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+<meta name="twitter:description" content="之前都是直接把要输出的，保存在文件中去。于是想试试数据库看看，写入数据一看，一堆乱码，于是记录下了。
 第一处在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-8.
-1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#10;">
+1create table table_name (first_name varchar(15) NOT NULL,&amp;#10;            last_name varchar(15)&amp;#65292;&amp;#1">
 
 
 
@@ -287,7 +287,7 @@
       
 
       
-        <span itemprop="articleBody"><pre><code>之前都是直接把要输出的保存在文件中去，于是想试试数据库看看。写入红一看到一堆乱码，于是记录下了。
+        <span itemprop="articleBody"><pre><code>之前都是直接把要输出的，保存在文件中去。于是想试试数据库看看，写入数据一看，一堆乱码，于是记录下了。
 </code></pre><h2 id="第一处">第一处</h2><pre><code>在创建表的时候可以设置默认字符集的，也就是说创建表的时候就指定为utf-<span class="number">8.</span>
 </code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table table_name (first_name varchar(15) NOT NULL,&#10;            last_name varchar(15)&#65292;&#10;            age int,&#10;            )ENGINE=InnoDB DEFAULT CHARSET=utf8</span><br></pre></td></tr></table></figure>
 <h2 id="第二处">第二处</h2><pre><code>在写入数据的时候，指定数据编码。

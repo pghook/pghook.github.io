@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="0x00、why线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己思想，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。
-0x01、threadpool1234pool = ThreadPool(poolsize)  reque">
+<meta name="description" content="0x00、why线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己有想法，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。
+0x01、threadpool1234pool = ThreadPool(poolsize)  requ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="threadpool 线程池">
 <meta property="og:url" content="http://www.pghook.com/2016/08/11/threadpool 线程池/index.html">
 <meta property="og:site_name" content="Portulaca grandiflora Hook">
-<meta property="og:description" content="0x00、why线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己思想，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。
-0x01、threadpool1234pool = ThreadPool(poolsize)  reque">
-<meta property="og:updated_time" content="2016-08-10T16:43:19.927Z">
+<meta property="og:description" content="0x00、why线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己有想法，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。
+0x01、threadpool1234pool = ThreadPool(poolsize)  requ">
+<meta property="og:updated_time" content="2016-08-10T16:52:07.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="threadpool 线程池">
-<meta name="twitter:description" content="0x00、why线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己思想，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。
-0x01、threadpool1234pool = ThreadPool(poolsize)  reque">
+<meta name="twitter:description" content="0x00、why线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己有想法，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。
+0x01、threadpool1234pool = ThreadPool(poolsize)  requ">
 
 
 
@@ -325,7 +325,7 @@
       
 
       
-        <h2 id="0x00、why">0x00、why</h2><p>线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己思想，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。</p>
+        <h2 id="0x00、why">0x00、why</h2><p>线程池，没搞过开发不知道这是啥玩意，最近自己在尝试开发一个系统。很庆幸自己有想法，知道要做成一个什么样子，但苦于不知道用什么技术来实现。还有部门有个专门搞开发的同学，向他请教，知道要实现我的需求，要用这个线程池，于是就有了这个了，当然也把多线程、队列等看了一遍，有时间也记录下。</p>
 <h2 id="0x01、threadpool">0x01、threadpool</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pool = <span class="function"><span class="title">ThreadPool</span><span class="params">(poolsize)</span></span>  </span><br><span class="line">requests = <span class="function"><span class="title">makeRequests</span><span class="params">(some_callable,list_of_args, callback)</span></span>  </span><br><span class="line">[pool.<span class="function"><span class="title">putRequest</span><span class="params">(req)</span></span> <span class="keyword">for</span> req <span class="keyword">in</span> requests]</span><br><span class="line">pool.<span class="function"><span class="title">wait</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>第一行定义了一个线程池，表示最多可以创建poolsize这么多线程；<br>第二行是调用makeRequests创建了要开启多线程的函数，以及函数相关参数和回调函数，其中回调函数可以不写，default是无，也就是说makeRequests只需要2个参数就可以运行；第三行用法比较奇怪，是将所有要运行多线程的请求扔进线程池，[pool.putRequest(req) for req in requests]等同于：</p>

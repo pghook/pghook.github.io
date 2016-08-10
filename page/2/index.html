@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,hexo," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,15 @@
 
 
 
-<meta name="description" content="废话闲的慌，弄个博客写写文章，一开始是买了阿里的主机。要备案闲麻烦，所以就没弄了。后来就用hexo，放到github上了，也就是现在这个啦！！">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用hexo发布到git碰到的问题">
-<meta property="og:url" content="http://www.pghook.com/2016/01/13/使用hexo发布到git碰到的问题/index.html">
+<meta name="description" content="热爱生活、相信未来">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portulaca grandiflora Hook">
+<meta property="og:url" content="http://www.pghook.com/page/2/index.html">
 <meta property="og:site_name" content="Portulaca grandiflora Hook">
-<meta property="og:description" content="废话闲的慌，弄个博客写写文章，一开始是买了阿里的主机。要备案闲麻烦，所以就没弄了。后来就用hexo，放到github上了，也就是现在这个啦！！">
-<meta property="og:updated_time" content="2016-07-30T16:46:29.122Z">
+<meta property="og:description" content="热爱生活、相信未来">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用hexo发布到git碰到的问题">
-<meta name="twitter:description" content="废话闲的慌，弄个博客写写文章，一开始是买了阿里的主机。要备案闲麻烦，所以就没弄了。后来就用hexo，放到github上了，也就是现在这个啦！！">
+<meta name="twitter:title" content="Portulaca grandiflora Hook">
+<meta name="twitter:description" content="热爱生活、相信未来">
 
 
 
@@ -114,9 +113,9 @@
 
 
 
-  <link rel="canonical" href="http://www.pghook.com/2016/01/13/使用hexo发布到git碰到的问题/"/>
+  <link rel="canonical" href="http://www.pghook.com/page/2/"/>
 
-  <title> 使用hexo发布到git碰到的问题 | Portulaca grandiflora Hook </title>
+  <title> Portulaca grandiflora Hook </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -147,7 +146,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,9 +235,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
   
@@ -256,7 +257,10 @@
             
             
               
-                使用hexo发布到git碰到的问题
+                
+                <a class="post-title-link" href="/2015/09/16/相信未来/" itemprop="url">
+                  相信未来
+                </a>
               
             
           </h1>
@@ -268,8 +272,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-13T15:11:16+08:00" content="2016-01-13">
-              2016-01-13
+            <time itemprop="dateCreated" datetime="2015-09-16T22:16:32+08:00" content="2015-09-16">
+              2015-09-16
             </time>
           </span>
 
@@ -282,8 +286,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/生活/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
                   </a>
                 </span>
 
@@ -298,8 +302,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/13/使用hexo发布到git碰到的问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/13/使用hexo发布到git碰到的问题/" itemprop="commentsCount"></span>
+                <a href="/2015/09/16/相信未来/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/16/相信未来/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,69 +326,47 @@
       
 
       
-        <h2 id="废话">废话</h2><p>闲的慌，弄个博客写写文章，一开始是买了阿里的主机。要备案闲麻烦，所以就没弄了。后来就用hexo，放到github上了，也就是现在这个啦！！<a id="more"></a></p>
-<h2 id="代码上传一">代码上传一</h2><p>我是在window环境下上传的，总是报错目前还有个问题没搞明白。总是去参考别人的<a href="http://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html" target="_blank" rel="external">文字</a>如下目前貌似需要把这个type修改成git了，原来用github，貌似现在不行了，修改成如下就好了。(‘xxxxx’这个是你要修改的)<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:xxxxx/xxxxx.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
-<h2 id="代码上传二">代码上传二</h2><p>我是在window下的平台发布到git上去，每次都要运行下“ssh-add”，输入passphrase 之前设置的密码。</p>
-
+        
+          <p>《相信未来》是我比较喜欢的诗，他的作者名字叫“食指” ，心情不好的时候，总喜欢看看这首诗。</p>
+<p>当蜘蛛网无情地查封了我的炉台，<br>当灰烬的余烟叹息着贫困的悲哀，<br>我依然固执地铺平失望的灰烬，<br>用美丽的雪花写下：相信未来。<br>当我的紫葡萄化为深秋的露水，<br>当我的鲜花依偎在别人的情怀，<br>我依然固执地用凝霜的枯藤，
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/16/相信未来/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/git/" rel="tag">#git</a>
-          
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/09/16/相信未来/" rel="next" title="相信未来">
-                <i class="fa fa-chevron-left"></i> 相信未来
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/18/python操作mysql数据库（编码问题）/" rel="prev" title="python操作mysql数据库（编码问题）">
-                python操作mysql数据库（编码问题） <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -392,14 +374,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/01/13/使用hexo发布到git碰到的问题/"
-           data-title="使用hexo发布到git碰到的问题" data-url="http://www.pghook.com/2016/01/13/使用hexo发布到git碰到的问题/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -419,17 +393,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xn5a6.com1.z0.glb.clouddn.com/e.png"
@@ -505,17 +470,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#废话"><span class="nav-number">1.</span> <span class="nav-text">废话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码上传一"><span class="nav-number">2.</span> <span class="nav-text">代码上传一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码上传二"><span class="nav-number">3.</span> <span class="nav-text">代码上传二</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -612,10 +566,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="NIDS,入侵检测系统," />
 
 
 
@@ -84,15 +84,23 @@
 
 
 
-<meta name="description" content="热爱生活、相信未来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Portulaca grandiflora Hook">
-<meta property="og:url" content="http://www.pghook.com/categories/蜜罐/index.html">
+<meta name="description" content="0xoo、ff001记录下
+0x00、架构图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Logstash Kibana and Suricata JSON output">
+<meta property="og:url" content="http://www.pghook.com/2016/08/25/Logstash Kibana and Suricata JSON output/index.html">
 <meta property="og:site_name" content="Portulaca grandiflora Hook">
-<meta property="og:description" content="热爱生活、相信未来">
+<meta property="og:description" content="0xoo、ff001记录下
+0x00、架构图">
+<meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/ids0.png">
+<meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/ids1.png">
+<meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/ids2.png">
+<meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/ids3.png">
+<meta property="og:updated_time" content="2016-08-23T16:31:14.158Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Portulaca grandiflora Hook">
-<meta name="twitter:description" content="热爱生活、相信未来">
+<meta name="twitter:title" content="Logstash Kibana and Suricata JSON output">
+<meta name="twitter:description" content="0xoo、ff001记录下
+0x00、架构图">
 
 
 
@@ -113,9 +121,9 @@
 
 
 
-  <link rel="canonical" href="http://www.pghook.com/categories/蜜罐/"/>
+  <link rel="canonical" href="http://www.pghook.com/2016/08/25/Logstash Kibana and Suricata JSON output/"/>
 
-  <title> 分类: 蜜罐 | Portulaca grandiflora Hook </title>
+  <title> Logstash Kibana and Suricata JSON output | Portulaca grandiflora Hook </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -146,7 +154,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,47 +242,160 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        蜜罐
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Logstash Kibana and Suricata JSON output
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-25T00:23:24+08:00" content="2016-08-25">
+              2016-08-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/入侵检测/" itemprop="url" rel="index">
+                    <span itemprop="name">入侵检测</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/25/Logstash Kibana and Suricata JSON output/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/25/Logstash Kibana and Suricata JSON output/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h3 id="0xoo、ff001">0xoo、ff001</h3><p>记录下</p>
+<h3 id="0x00、架构图">0x00、架构图</h3><p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/ids0.png" alt="img"><a id="more"></a></p>
+<p>说明：</p>
+<p>Suricata通过网络镜像接口捕获流量，使用规则（Rules）对其进行匹配，生成告警信息，输出到mysql数据库和json文件。Snorby从mysq数据库中读取数据，并对其进行展示。Logstash将输出的json文件内容导入到ElasticSearch，使用Kiabana对其进行展示。</p>
+<h3 id="0x01、展示界面">0x01、展示界面</h3><p>Snorby界面：</p>
+<p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/ids1.png" alt="img"></p>
+<p>Kibana界面1（安全告警事件）：</p>
+<p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/ids2.png" alt="img"></p>
+<p>Kibana界面2（自定义规则记录的“ssh登陆事件”）：</p>
+<p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/ids3.png" alt="img"></p>
+<h3 id="0x03、参考链接">0x03、参考链接</h3><p><a href="https://redmine.openinfosecfoundation.org/projects/suricata/wiki/_Logstash_Kibana_and_Suricata_JSON_output" target="_blank" rel="external">https://redmine.openinfosecfoundation.org/projects/suricata/wiki/_Logstash_Kibana_and_Suricata_JSON_output</a><br><a href="https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Suricata_Snorby_and_Barnyard2_set_up_guide" target="_blank" rel="external">https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Suricata_Snorby_and_Barnyard2_set_up_guide</a></p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/07/31/一个‘米国’黑客的故事/" itemprop="url">
-              
-                <span itemprop="name">一个‘米国’黑客的故事</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-31T00:13:24+08:00"
-              content="2016-07-31" >
-          07-31
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NIDS/" rel="tag">#NIDS</a>
+          
+            <a href="/tags/入侵检测系统/" rel="tag">#入侵检测系统</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/11/threadpool 线程池/" rel="next" title="threadpool 线程池">
+                <i class="fa fa-chevron-left"></i> threadpool 线程池
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -282,6 +403,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/25/Logstash Kibana and Suricata JSON output/"
+           data-title="Logstash Kibana and Suricata JSON output" data-url="http://www.pghook.com/2016/08/25/Logstash Kibana and Suricata JSON output/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -301,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xn5a6.com1.z0.glb.clouddn.com/e.png"
@@ -378,6 +516,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0xoo、ff001"><span class="nav-number">1.</span> <span class="nav-text">0xoo、ff001</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x00、架构图"><span class="nav-number">2.</span> <span class="nav-text">0x00、架构图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01、展示界面"><span class="nav-number">3.</span> <span class="nav-text">0x01、展示界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03、参考链接"><span class="nav-number">4.</span> <span class="nav-text">0x03、参考链接</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -474,6 +623,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

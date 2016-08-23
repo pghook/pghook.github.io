@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg14.png">
 <meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg15.png">
 <meta property="og:image" content="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg16.png">
-<meta property="og:updated_time" content="2016-07-31T07:18:56.574Z">
+<meta property="og:updated_time" content="2016-08-23T16:40:57.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos & Vmware储存空间">
 <meta name="twitter:description" content="0x00、问题来了物理机安装的是Centos系统，上面安装了个vmware，vmware上安装了个Centos。时间一长，发现虚拟机所占的空间吓死人，148G（没一张快照）。跑到虚拟机里面一下，发现20G不到，问题就来了？这是咋回事捏？
@@ -346,7 +346,7 @@
 <p>（物理机上看到的）</p>
 <p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg12.png" alt="img"></p>
 <p>（虚拟机上看到的）<a id="more"></a></p>
-<h2 id="0x01、解决办法（不能根治）">0x01、解决办法（不能根治）</h2><p>A、可能是linux删除文件未释放空间（没有解决，不过涨知识了以前不知道有这回事）</p>
+<h2 id="0x01、解决办法（可以根治）">0x01、解决办法（可以根治）</h2><p>A、可能是linux删除文件未释放空间（没有解决，不过涨知识了以前不知道有这回事）</p>
 <p>linux里的文件被删除后，空间没有被释放是因为在Linux系统中，通过rm或者文件管理器删除文件将会从文件系统的目录结构上解除链接(unlink).然而如果文件是被打开的(有一个进程正在使用)，那么进程将仍然可以读取该文件，磁盘空间也一直被占用。</p>
 <p>解决方法：</p>
 <p>1、先df -lh查看一下磁盘使用状况</p>
@@ -367,7 +367,10 @@
 <p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg14.png" alt="img"></p>
 <p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg15.png" alt="img"></p>
 <p><img src="http://7xn5a6.com1.z0.glb.clouddn.com/image/jpg16.png" alt="img"></p>
-<h2 id="0x02、待解决">0x02、待解决</h2><p>虽然从113G变成了80G，但还是有问题。我虚拟机实际使用的空间20G不到，这个80G里面都是些啥玩意？怎么去干掉它了？</p>
+<h2 id="0x02、待解决（后来搞定了）">0x02、待解决（后来搞定了）</h2><p>虽然从113G变成了80G，但还是有问题。我虚拟机实际使用的空间20G不到，这个80G里面都是些啥玩意？怎么去干掉它了？</p>
+<p> 解决办法：<br>vmware-toolbox-cmd disk list 查看磁盘挂载点，然后执行<br>如挂载点有如下<br>/<br>/home<br>/tmp</p>
+<p>那你需要在虚拟机里面，执行如下命令,就ok了。</p>
+<p>vmware-toolbox-cmd disk shrink /<br>vmware-toolbox-cmd disk shrink /home<br>vmware-toolbox-cmd disk shrink /tmp</p>
 
       
     </div>
@@ -555,7 +558,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00、问题来了"><span class="nav-number">1.</span> <span class="nav-text">0x00、问题来了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01、解决办法（不能根治）"><span class="nav-number">2.</span> <span class="nav-text">0x01、解决办法（不能根治）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02、待解决"><span class="nav-number">3.</span> <span class="nav-text">0x02、待解决</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00、问题来了"><span class="nav-number">1.</span> <span class="nav-text">0x00、问题来了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01、解决办法（可以根治）"><span class="nav-number">2.</span> <span class="nav-text">0x01、解决办法（可以根治）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02、待解决（后来搞定了）"><span class="nav-number">3.</span> <span class="nav-text">0x02、待解决（后来搞定了）</span></a></li></ol></div>
             
           </div>
         </section>
